@@ -141,8 +141,8 @@
             if( @$args['id'] AND is_numeric($args['id'])){
                 $update = [];
                 foreach($params as $key => $par){
-                    if(@$par != '' AND array_key_exists($key, self::$columns)){
-                        $insert[$key] = $par;
+                    if(@$par != '' AND in_array($key, self::$columns)){
+                        $update[$key] = $par;
                     }
                 }
                 
@@ -158,7 +158,7 @@
                     $response->getBody()->write(
                         json_encode([
                             'cod' => 404,
-                            'message' => 'Nenhum dado para informado'
+                            'message' => 'Nenhum dado informado para atualização'
                         ])
                     );
                 }
