@@ -80,8 +80,10 @@
 							}
 						}
 					}
-					$log['data'] = $values;
-					$log['where'] = $wheres;
+					if(DEBUG){
+						$log['data'] = $values;
+						$log['where'] = $wheres;
+					}
 	
 					if(count($wheres) > 0){
 						$wheres = implode(' AND ', $wheres);
