@@ -1,0 +1,10 @@
+# System #
+######################
+config/config.php
+vendor/
+docker-db/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
