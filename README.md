@@ -11,13 +11,52 @@ O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www
 <img align="center" width="100%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
 
 <p align="center">
-  <a href="#Conteúdo">Conteúdo</a> •
-  <a href="#Instalação">Instalação</a> •
-  <a href="#art-about-me">About Me</a>
+  <a href="#API-Endpoint">Endpoint</a> •
+  <a href="#Instalação">Instalação</a>
 </p>
 
-## **Conteúdo**
+## **API Endpoint**
 
+`GET /drones` (Lista todos os drones)
+- Filtro por query string:
+    - `name`
+    - `address`
+    - `battery`
+    - `max_speed`
+    - `average_speed`
+    - `status`
+    
+- Paginação por query string:
+    - `_page`
+    - `_limit` (Padrão 10)
+
+- Ordenação por query string:
+    - `_sort` (Nome do campo)
+    - `_order` (ASC ou DESC)
+    
+`POST /drones` (Cria um novo drone)
+- Parâmetros via form-data:
+    - *`image` (URL, ex: "https://robohash.org/verovoluptatequia.jpg")
+    - *`name` (Ex: "Suzann")
+    - *`address` (Ex: "955 Springview Junction")
+    - *`battery` (0 à 100, ex: 90)
+    - *`max_speed` (Ex: 3.8)
+    - *`average_speed` (Ex: 11.6)
+    - *`status` ('success' ou 'failed')
+    * Parâmetros obrigatórios
+
+`PUT /drones/{id}` (Utualiza um drone)
+- Parâmetros via form-data:
+    - `image` (URL, ex: "https://robohash.org/verovoluptatequia.jpg")
+    - `name` (Ex: "Suzann")
+    - `address` (Ex: "955 Springview Junction")
+    - `battery` (0 à 100, ex: 90)
+    - `max_speed` (Ex: 3.8)
+    - `average_speed` (Ex: 11.6)
+    - `status` ('success' ou 'failed')
+
+`DELETE /drones/{id}` (Apaga o drone)
+  
 ## **Instalação**
 
 ### 1) Clone & Install Dependencies
