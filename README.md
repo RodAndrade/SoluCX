@@ -3,7 +3,7 @@
 
 O objetivo do teste era criar uma API REST com PHP, utilizando [Slim][http://www.slimframework.com/] ou [Lumen][https://lumen.laravel.com/] dados de entregas por drones.
 
-![](/www/demonstracao.git)
+![](www/demonstracao.git)
 
 ## Instalação
 
