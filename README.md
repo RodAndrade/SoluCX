@@ -11,7 +11,8 @@ O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www
 <img align="center" width="100%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
 
 <p align="center">
-  <a href="#API-Endpoint">Endpoint</a> •
+  <br>
+  <a href="#API-Endpoint">API Endpoint</a> •
   <a href="#Instalação">Instalação</a>
 </p>
 
@@ -64,7 +65,7 @@ O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www
 Para clonar e rodar essa aplicação, você irá precisar de [Docker](https://docs.docker.com/get-docker/), [Git](https://git-scm.com) e [Composer](https://getcomposer.org/download/)
 
 - `git clone https://github.com/RodAndrade/SoluCX/`
-- `cd SoluCX` - cd into project directory.
+- `cd SoluCX` - cd into project directory
 - `php composer.phar update` - Install composer dependencies
 - `docker build . -t solucx:latest` - Compile te latest solocx image
 - `docker-compose up -d` - Compose the containers
