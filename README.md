@@ -43,7 +43,7 @@ O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www
     - *`max_speed` (Ex: 3.8)
     - *`average_speed` (Ex: 11.6)
     - *`status` ('success' ou 'failed')
-    * Parâmetros obrigatórios
+    - *Parâmetros obrigatórios
 
 `PUT /drones/{id}` (Utualiza um drone)
 - Parâmetros via form-data:
