@@ -3,7 +3,7 @@
 
 O objetivo do teste era criar uma API REST com PHP, utilizando [Slim][http://www.slimframework.com/] ou [Lumen][https://lumen.laravel.com/] dados de entregas por drones.
 
-<img align="center" width="400" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
+<img align="center" width="100%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
 
 ## Instalação
 
