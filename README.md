@@ -1,11 +1,9 @@
 # Desafio técnico SoluCX | Back end (PHP) 
 > Teste para desenvolvedor back end PHP, com objetivo de criar uma API REST 
 
-[![NPM Version][npm-image]][npm-url]
-
 O objetivo do teste era criar uma API REST com PHP, utilizando [Slim][http://www.slimframework.com/] ou [Lumen][https://lumen.laravel.com/] dados de entregas por drones.
 
-![](./www/demonstracao.git)
+![](/www/demonstracao.git)
 
 ## Instalação
 
