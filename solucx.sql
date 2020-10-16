@@ -11,7 +11,7 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `solucx` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `solucx`;
 
-CREATE TABLE `drone` (
+CREATE TABLE IF NOT EXISTS `drone` (
   `id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `drone` (
   `status` enum('success','failed') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `drone` (`id`, `image`, `name`, `address`, `battery`, `max_speed`, `average_speed`, `status`) VALUES
+INSERT IGNORE INTO `drone` (`id`, `image`, `name`, `address`, `battery`, `max_speed`, `average_speed`, `status`) VALUES
 (1, 'url', 'teste', 'asja sasa address', 22, 3.2, 2.3, 'failed'),
 (3, '1', 'Teste 3', '1', 1, 1.0, 1.0, 'success'),
 (4, '1', 'Teste 4', '1', 1, 1.0, 1.0, 'success'),

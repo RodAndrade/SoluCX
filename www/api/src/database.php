@@ -314,18 +314,25 @@
 		}
 		
 		public function scape_string($data){
-			$con = $this->connect();
-	
-			if(is_array($data)){
-				foreach ($data as $key => $value) {
-					$data[mb_strtolower($key)] = mysqli_real_escape_string($con, $value);
+			$conn = $this->connect();
+			
+			if($conn != null){
+				if(is_array($data)){
+					foreach ($data as $key => $value) {
+						$data[mb_strtolower($key)] = mysqli_real_escape_string($con, $value);
+					}
+				} else {
+					$data = mysqli_real_escape_string($con, $data);
 				}
+		
+				$this->destroy($con);
+				return $data; 
 			} else {
-				$data = mysqli_real_escape_string($con, $data);
+				$log['cod'] = 500;
+				$log['message'] = 'Erro ao se conectar com o banco de dados';
+				
+				return $log;
 			}
-	
-			$this->destroy($con);
-			return $data;
 		}
 	}
 ?>
