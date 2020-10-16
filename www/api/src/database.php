@@ -319,13 +319,13 @@
 			if($conn != null){
 				if(is_array($data)){
 					foreach ($data as $key => $value) {
-						$data[mb_strtolower($key)] = mysqli_real_escape_string($con, $value);
+						$data[mb_strtolower($key)] = mysqli_real_escape_string($conn, $value);
 					}
 				} else {
-					$data = mysqli_real_escape_string($con, $data);
+					$data = mysqli_real_escape_string($conn, $data);
 				}
 		
-				$this->destroy($con);
+				$this->destroy($conn);
 				return $data; 
 			} else {
 				$log['cod'] = 500;

@@ -3,6 +3,8 @@ services:
   solucx-web:
     image: solucx:latest
     tty: true
+    container_name: solucxapi-web
+    restart: always
     ports:
       - "8000:8000"
     volumes:
@@ -10,3 +12,24 @@ services:
       - ./docker-assets/nginx/solucx.conf:/etc/nginx/sites-enabled/solucx.conf
       - ./docker-assets/php-fpm/php.ini:/etc/php/7.4/fpm/php.ini
       - ./docker-assets/php-fpm/www.conf:/etc/php/7.4/fpm/pool.d/www.conf
+    depends_on:
+      - solucx-database
+    links:
+      - solucx-database
+
+  solucx-database:
+    image: mysql:5.7
+    tty: true
+    container_name: solucxapi-database
+    ports:
+      - '3307:3307'
+    restart: always
+    volumes:
+      - ./database:/database
+      - ./docker-db:/var/lib/mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+      MYSQL_DATABASE: 'solucx'
+      MYSQL_USER: 'root'
+      MYSQL_PASS: ''
+      MYSQL_TCP_PORT: '3307'

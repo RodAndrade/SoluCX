@@ -1,5 +1,6 @@
 # System #
 ######################
+vendor/
 docker-db/
 
 # OS generated files #

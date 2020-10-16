@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
 LABEL maintainer="Rodrigo Andrade"
-ADD solucx.sql /solucx/
 
 # Basic ubuntu repository updates
 RUN apt-get update && apt-get upgrade -y
@@ -38,11 +37,7 @@ RUN apt-get install --no-install-recommends --no-install-suggests -y \
 
 # Installs mysql client if necessary
 RUN apt-get install --no-install-recommends --no-install-suggests -y \
-	mysql-server
-	
-RUN service mysql start
-
-RUN mysql solucx < /solucx/solucx.sql
+	mysql-client
 	
 RUN apt-get update -y
 
