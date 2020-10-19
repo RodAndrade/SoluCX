@@ -48,7 +48,7 @@
     - `_order` (ASC ou DESC)
     
 `POST /drones` (Cria um novo drone)
-- Parâmetros via form-data:
+- Parâmetros via json:
     - *`image` (URL, ex: "https://robohash.org/verovoluptatequia.jpg")
     - *`name` (Ex: "Suzann")
     - *`address` (Ex: "955 Springview Junction")
@@ -59,7 +59,7 @@
     - *Parâmetros obrigatórios
 
 `PUT /drones/{id}` (Utualiza um drone)
-- Parâmetros via form-data:
+- Parâmetros via json:
     - `image` (URL, ex: "https://robohash.org/verovoluptatequia.jpg")
     - `name` (Ex: "Suzann")
     - `address` (Ex: "955 Springview Junction")
