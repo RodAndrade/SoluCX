@@ -18,7 +18,7 @@ O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www
 
 <p float="left">
   <img width="50%" align="left" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
-  <img width="50%" align="right" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao2.png?raw=true">
+  <img width="50%" align="right" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.png?raw=true">
   <hr>
 </p>
 
