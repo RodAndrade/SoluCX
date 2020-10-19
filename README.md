@@ -6,9 +6,11 @@
 
 <p align="center">
     Teste para desenvolvedor back end PHP, com objetivo de criar uma API REST.
-   
+</p>
+<p align="center">
     O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www.slimframework.com/) ou [Lumen](https://lumen.laravel.com/) para fornecer dados de entregas por drones.
-
+</p>
+<p align="center">
     :star: Bonus: foi criado uma interface utilizando VueJS e Bootstrap para visualizar os dados obtidos pela API.
 </p>
 
