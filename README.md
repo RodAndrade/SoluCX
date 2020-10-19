@@ -4,11 +4,14 @@
   Desafio técnico SoluCX | Back end (PHP)
 </h2>
 
-<p align="center">Teste para desenvolvedor back end PHP, com objetivo de criar uma API REST .</p>
+<p align="center">
+    Teste para desenvolvedor back end PHP, com objetivo de criar uma API REST.
+   
+    O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www.slimframework.com/) ou [Lumen](https://lumen.laravel.com/) para fornecer dados de entregas por drones.
 
-O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www.slimframework.com/) ou [Lumen](https://lumen.laravel.com/) para fornecer dados de entregas por drones.
+    :star: Bonus: foi criado uma interface utilizando VueJS e Bootstrap para visualizar os dados obtidos pela API.
+</p>
 
-:star: Bonus: foi criado uma interface utilizando VueJS e Bootstrap para visualizar os dados obtidos pela API.
 
 <p align="center">
   <br>
@@ -16,9 +19,9 @@ O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www
   <a href="#Instalação">Instalação</a>
 </p>
 
-<p float="left">
-  <img width="50%" align="left" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
-  <img width="50%" align="right" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.png?raw=true">
+<p align="center">
+  <img width="75%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
+  <img width="75%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.png?raw=true">
   <hr>
 </p>
 
