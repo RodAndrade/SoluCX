@@ -21,6 +21,7 @@
 
 <p align="center">
   <img width="75%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
+  <br>
   <img width="75%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.png?raw=true">
   <hr>
 </p>
