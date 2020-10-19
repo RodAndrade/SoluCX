@@ -88,7 +88,8 @@
         public function insert($request = null, $response = null, $args = []){
             // Create database class
             $DB = new Database();
-            $params = $request->getQueryParams();
+            $params = $request->getBody();
+            $params = json_decode($params, true);
             $params = $DB->scape_string($params);
             
             $required = [];
@@ -102,13 +103,17 @@
                 $response->getBody()->write(
                     json_encode([
                         'cod' => 400,
-                        'message' => 'Por favor, informe o(s) campo(s): '.(implode(', ', $compare_parametros))
+                        'message' => 'Por favor, informe o(s) campo(s): '.(implode(', ', $compare_parametros)),
+                        'body' => $params
                     ])
                 );
             } else {
                 $insert = [];
                 foreach($params as $key => $par){
                     if(@$par != '' AND in_array($key, self::$columns)){
+                        if($key == 'image' && !filter_var($par, FILTER_VALIDATE_URL)){
+                            $par = 'https://robohash.org/verovoluptatequia.jpg';
+                        }
                         $insert[$key] = $par;
                     }
                 }
@@ -135,7 +140,8 @@
         public function update($request = null, $response = null, $args = []){
             // Create database class
             $DB = new Database();
-            $params = $request->getQueryParams();
+            $params = $request->getBody();
+            $params = json_decode($params, true);
             $params = $DB->scape_string($params);
             
             if( @$args['id'] AND is_numeric($args['id'])){
@@ -158,7 +164,8 @@
                     $response->getBody()->write(
                         json_encode([
                             'cod' => 404,
-                            'message' => 'Nenhum dado informado para atualização'
+                            'message' => 'Nenhum dado informado para atualização',
+                            'data' => $params
                         ])
                     );
                 }

@@ -8,12 +8,18 @@
 
 O objetivo do teste era criar uma API REST com PHP, utilizando [Slim](http://www.slimframework.com/) ou [Lumen](https://lumen.laravel.com/) para fornecer dados de entregas por drones.
 
-<img align="center" width="100%" height="400" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
+:star: Bonus: foi criado uma interface utilizando VueJS e Bootstrap para visualizar os dados obtidos pela API.
 
 <p align="center">
   <br>
   <a href="#API-Endpoint">API Endpoint</a> •
   <a href="#Instalação">Instalação</a>
+</p>
+
+<p float="left">
+  <img width="50%" align="left" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao.gif?raw=true">
+  <img width="50%" align="right" height="350" src="https://github.com/RodAndrade/SoluCX/blob/master/www/demonstracao2.png?raw=true">
+  <hr>
 </p>
 
 ## **API Endpoint**
@@ -67,15 +73,19 @@ Para clonar e rodar essa aplicação, você irá precisar de [Docker](https://do
 - `git clone https://github.com/RodAndrade/SoluCX/`
 - `cd SoluCX` - cd into project directory
 - `php composer.phar update` - Install composer dependencies
+- `cd /web/assets/` - cd into assets folder inside web directory
+- `npm install` - install node dependecies
 - `docker build . -t solucx:latest` - Compile te latest solocx image
 - `docker-compose up -d` - Compose the containers
 - `docker exec -it solucxapi-database /bin/bash ./database/seeds.sh` - Import DB schema and seeds
+- Open `localhost:8000` - Into your browser
 
 ### 2) Extras
 
 - `docker rm -f solucxapi-web` - Stop web container
 - `docker rm -f solucxapi-database` - Stop database container
 - `docker exec -it containerName /bin/bash` - Access a container shell
+- `docker rm -f $(docker ps -a -q)` - Stop all docker containers
 
 ---
 

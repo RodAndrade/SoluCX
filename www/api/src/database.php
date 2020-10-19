@@ -166,6 +166,10 @@
 				}
 				
 				if(@$paginate['page'] AND @$paginate['limit']){
+					$result = $conn->query($sql);
+					$totalRows = $result->num_rows;
+					$log['total'] = $totalRows;
+					
 					$paginate = $this->scape_string($paginate);
 					$limit  =  (@$paginate['limit'] AND is_numeric(@$paginate['limit'])) ? 
 								intval($paginate['limit']) : 
@@ -193,6 +197,11 @@
 					while ($dado = mysqli_fetch_assoc($result)) {
 						if(@$dado['id']){
 							$dado['id_format'] = str_pad($dado['id'], 4, "0", STR_PAD_LEFT);
+						}
+						foreach($dado as $dadoCol => $dadoVal){
+							if(is_numeric($dadoVal)){
+								$dado[$dadoCol] = floatval($dadoVal);
+							}
 						}
 						$log['result'][] = $dado;
 					}
